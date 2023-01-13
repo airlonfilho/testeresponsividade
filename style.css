@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* colors */
+:root {
+    /* primary */
+    --very-dark-blue: hsl(243, 87%, 12%);
+    --desaturated-blue: hsl(238, 22%, 44%); 
+
+    /* accent */
+    --bright-blue: hsl(224, 93%, 58%);
+    --moderate-cyan: hsl(170, 45%, 43%);
+
+    /* neutral */
+    --light-grayish-blue: hsl(240, 75%, 98%);
+    --light-gray: hsl(0, 0%, 75%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5vh 5vw;
+}
+
+header img {
+    width: 15%;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    padding-left: 2vw;
+    list-style: none;
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5vw;
+    align-items: center;
+}
+
+.content-text {
+    color: var(--very-dark-blue);
+}
+
+.content-text p {
+    font-size: 0.9rem;
+    width: 90%;
+    margin-top: 4vh;
+}
+
+.content img {
+    width: 40%;
+    padding-left: 5vw;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 480px) and (max-width: 767px) {}
+@media (max-width: 479px) {
+    header img {
+        width: 25%;
+    }
+
+    ul li {
+        font-size: 0.8rem;
+        padding-left: 5vw;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-top: 10vh;
+        text-align: center;
+    }
+
+    .content-text {
+        order: 2;
+    }
+
+    .content-text h1 {
+        font-size: 1.9rem;
+    }
+    
+    .content-text p {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .content img {
+        order: 1;
+        padding-left: 0;
+        width: 90%;
+    }
+}
